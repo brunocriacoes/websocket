@@ -1,5 +1,13 @@
-const ws = new WebSocket('ws://localhost:1337')
-ws.onopen = this.onopen
-ws.onclose = this.onclose
-ws.onmessage = this.onmessage
-ws.onerror = this.onerror
+const ws = new WebSocket('ws://loja.menugastro.com.br:2022')
+ws.onopen = event => {
+    console.log({ev: 'open', event})
+}
+ws.onclose = event => {
+    console.log({ev: 'cose', event})
+}
+ws.onmessage = event => {
+    console.log({ev: 'menssage', event})
+}
+ws.onerror = event => {
+    console.log({ev: 'error', event})
+}
