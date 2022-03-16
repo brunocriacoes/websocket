@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://loja.menugastro.com.br:2022')
+const ws = new WebSocket('https://loja.menugastro.com.br:2022')
 ws.onopen = event => {
     console.log({ev: 'open', event})
 }
